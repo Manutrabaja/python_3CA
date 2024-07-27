@@ -2,7 +2,7 @@
     ordena una lista aleatoria con la cantidad de elementos ingesados
     
     arg:
-    lista: lista de numeros enteros a ordenar
+    lista: lista de numeros enteros con elementos aleatorios
 
     retruns: 2 lista ordenadas de manera acendente y desendente  """
 import random
@@ -15,8 +15,12 @@ def insertion_sort(lista):
         jalado = i                           # jalado es donde se va a colocar el valor de i
 
         while jalado > 0 and lista[jalado - 1] > valor_actual:
+            print(f'lista[jalado - 1]: {lista[jalado - 1]} > valor_ actual: {valor_actual}')
             lista[jalado] = lista[jalado - 1]
+            print(f'lista[jalado]: {lista[jalado]} = lista[jalado -1]: {lista[jalado - 1]}')
             jalado -= 1
+            print(f'jalado -=1 {jalado}')
+            print(lista)
 
             print(valor_actual)
         lista[jalado] = valor_actual
